@@ -12,7 +12,7 @@ public class CorsConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOriginPatterns("https://mindracers2-dpa2hqfmbugggth5.canadacentral-01.azurewebsites.net") // Cambia esto por la URL de tu frontend si es diferente
+                .allowedOrigins("https://mindracers2-dpa2hqfmbugggth5.canadacentral-01.azurewebsites.net") // Usar allowedOrigins en lugar de allowedOriginPatterns
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
                 .allowCredentials(true);
