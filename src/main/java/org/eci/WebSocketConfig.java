@@ -19,7 +19,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-        registry.addEndpoint("/ws") // Cambia "/wss" por "/ws" (más estándar)
+        registry.addEndpoint("/wss") // Cambia "/wss" por "/ws" (más estándar)
                 .setAllowedOrigins("https://mindracers2-dpa2hqfmbugggth5.canadacentral-01.azurewebsites.net") // Reemplaza por tu dominio
                 .withSockJS(); // Habilita soporte para SockJS
     }
