@@ -19,7 +19,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
         registry.addEndpoint("/wss")
-                .setAllowedOriginPatterns("http://mindracers2-dpa2hqfmbugggth5.canadacentral-01.azurewebsites.net") // Cambia esto por tu URL de frontend
+                .setAllowedOriginPatterns("https://mindracers2-dpa2hqfmbugggth5.canadacentral-01.azurewebsites.net") // Cambia esto por tu URL de frontend
                 .withSockJS();
     }
 }
