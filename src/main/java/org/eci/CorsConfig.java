@@ -12,7 +12,7 @@ public class CorsConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("https://mindracers2-dpa2hqfmbugggth5.canadacentral-01.azurewebsites.net") // Usar allowedOrigins en lugar de allowedOriginPatterns
+                .allowedOrigins("http://mindracers2-dpa2hqfmbugggth5.canadacentral-01.azurewebsites.net") // Usar allowedOrigins en lugar de allowedOriginPatterns
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
                 .allowCredentials(true);
