@@ -12,14 +12,15 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 
     @Override
     public void configureMessageBroker(MessageBrokerRegistry config) {
-        config.enableSimpleBroker("/topic");
-        config.setApplicationDestinationPrefixes("/app");
+        // Configuración del broker para manejar mensajes STOMP
+        config.enableSimpleBroker("/topic"); // Prefijo para mensajes enviados al cliente
+        config.setApplicationDestinationPrefixes("/app"); // Prefijo para mensajes enviados al servidor
     }
 
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-        registry.addEndpoint("/wss")
-                .setAllowedOriginPatterns("https://mindracers2-dpa2hqfmbugggth5.canadacentral-01.azurewebsites.net") // Cambia esto por tu URL de frontend
-                .withSockJS();
+        registry.addEndpoint("/ws") // Cambia "/wss" por "/ws" (más estándar)
+                .setAllowedOrigins("https://mindracers2-dpa2hqfmbugggth5.canadacentral-01.azurewebsites.net") // Reemplaza por tu dominio
+                .withSockJS(); // Habilita soporte para SockJS
     }
 }
